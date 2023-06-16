@@ -7,10 +7,12 @@ const StyledHeader = styled.header`
   align-items: center;
   padding-left: 12px;
   height: 50px;
+`;
+
+const StyledParagraph = styled.p`
   color: white;
-  .p {
-    color: blue;
-  }
+  padding-left: 8px;
+  margin: 0;
 `;
 
 function Header({ children }) {
@@ -18,8 +20,8 @@ function Header({ children }) {
     <StyledHeader>
       <img src={icon} alt="icon" />
       <div>
-        <p>Add expense to</p>
-        <p>Groceries</p>
+        <StyledParagraph>Add expense to</StyledParagraph>
+        <StyledParagraph>Groceries</StyledParagraph>
       </div>
     </StyledHeader>
   );
