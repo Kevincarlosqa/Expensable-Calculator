@@ -68,7 +68,16 @@ function App() {
             prevNumber: null,
             operant: null,
             currentNumber: result
-          })
+          });
+        break
+        case "÷":
+          result = parseFloat(state.prevNumber)/parseFloat(state.currentNumber)
+          setState({
+            ...state,
+            prevNumber: null,
+            operant: null,
+            currentNumber: result
+          });
         break
       default:
         break
