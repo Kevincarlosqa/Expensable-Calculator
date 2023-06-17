@@ -9,10 +9,13 @@ justify-content: center;
 align-items: center;
 `;
 
-function Display(){
+function Display({state}){
+    console.log(state)
+    const message = state.operant ? state.prevNumber + state.operant + (state.currentNumber ? state.currentNumber : "") : state.currentNumber
+    
     return (
     <StyleDisplay>
-        <p>$0</p>
+        <p>${message}</p>
     </StyleDisplay>)
     ;
 }

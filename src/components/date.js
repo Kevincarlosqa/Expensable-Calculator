@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 
 const StyledDate = styled.div`
   background-color: #f3f4f6;
+  grid-column: 1 / 6;
+  text-align: center;
 `;
 
 const date = new Date();

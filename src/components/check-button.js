@@ -9,11 +9,13 @@ const StyledCheckButton = styled.div`
   justify-content: center;
   align-items: center;
   align-self: end;
+  grid-column: 5;
+  grid-row: 3 / 5;
 `;
 
-function CheckButton({ children }) {
+function CheckButton({ children, onClick }) {
   return (
-    <StyledCheckButton>
+    <StyledCheckButton onClick={onClick}>
       <img src={check} alt="check" />
     </StyledCheckButton>
   );

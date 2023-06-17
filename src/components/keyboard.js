@@ -7,8 +7,8 @@ const StyleKeyboard = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.isOperator ? "#F3F4F6" : "#ffffff"};
-  ${(props) => console.log(props.isOperator)}
 `;
+
 const StyledParagraph = styled.p`
   color: #4b5563;
   height: 28px;
@@ -17,9 +17,9 @@ const StyledParagraph = styled.p`
   color: #4b5563;
 `;
 
-function Keyboard({ value, isOperator = "false" }) {
+function Keyboard({ value, isOperator = false, onClick }) {
   return (
-    <StyleKeyboard isOperator={isOperator}>
+    <StyleKeyboard isOperator={isOperator} onClick={onClick}>
       <StyledParagraph>{value}</StyledParagraph>
     </StyleKeyboard>
   );
