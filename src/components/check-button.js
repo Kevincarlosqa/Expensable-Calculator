@@ -8,6 +8,7 @@ const StyledCheckButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: end;
 `;
 
 function CheckButton({ children }) {

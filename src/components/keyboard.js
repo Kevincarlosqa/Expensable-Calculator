@@ -2,10 +2,12 @@ import styled from "@emotion/styled";
 const StyleKeyboard = styled.div`
   width: 50px;
   height: 50px;
-  background: #ffffff;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.isOperator ? "#F3F4F6" : "#ffffff"};
+  ${(props) => console.log(props.isOperator)}
 `;
 const StyledParagraph = styled.p`
   color: #4b5563;
@@ -15,9 +17,9 @@ const StyledParagraph = styled.p`
   color: #4b5563;
 `;
 
-function Keyboard({ value }) {
+function Keyboard({ value, isOperator = "false" }) {
   return (
-    <StyleKeyboard>
+    <StyleKeyboard isOperator={isOperator}>
       <StyledParagraph>{value}</StyledParagraph>
     </StyleKeyboard>
   );
